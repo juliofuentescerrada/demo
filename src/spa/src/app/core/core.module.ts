@@ -1,13 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RoutingModule } from './routing.module';
-import { ShellComponent } from './shell/shell.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShellComponent } from './components/shell/shell.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ShellComponent],
-  imports: [
-    CommonModule,
-    RoutingModule
-  ]
+  declarations: [ShellComponent, MenuComponent, FooterComponent],
+  imports: [CommonModule, RouterModule, HttpClientModule]
 })
 export class CoreModule { }
